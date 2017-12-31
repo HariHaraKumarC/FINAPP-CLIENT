@@ -1,0 +1,30 @@
+/* Mat Sub Header*/
+.finapp-side-nav-menu .mat-nav-list .mat-subheader{
+  height: 10px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #0000cc;
+}
+
+/* Mat List Item*/
+.finapp-side-nav-menu .mat-nav-list .mat-list-item{
+  height: 40px;
+}
+
+/* Mat List Icon*/
+.finapp-side-nav-menu .mat-nav-list .mat-list-item .mat-list-icon{
+  height: 15px;
+  width: 15px;
+  font-size: 15px;
+  color: #666e76;
+}
+
+/* Mat line*/
+.finapp-side-nav-menu .mat-nav-list .mat-list-item .mat-line{
+  font-size: 12px;
+  color: #666e76;
+}
+
+.finapp-side-nav-menu {
+  border: black;
+}
