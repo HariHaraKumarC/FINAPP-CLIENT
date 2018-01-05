@@ -1,0 +1,47 @@
+<div id="finapp-savings">
+  <div class="finapp-body-sidenav-content-primary-card">
+    <mat-card class="mat-elevation-z6">
+      <mat-card-header>
+        <mat-card-title>Savings</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div id="finapp-savings-content" class="finapp-body-sidenav-content-primary-card-content">
+          <mat-grid-list cols="3" rowHeight="40px">
+            <mat-grid-tile><span class="grid-list-label">Deposited Amount: <span class="grid-list-value">15000.00</span></span></mat-grid-tile>
+            <mat-grid-tile><span class="grid-list-label">Current value: <span class="grid-list-value">15500.00</span></span></mat-grid-tile>
+            <mat-grid-tile><span class="grid-list-label">Deposited Amount: <span class="grid-list-value">500.00</span></span></mat-grid-tile>
+          </mat-grid-list>
+          <mat-divider></mat-divider>
+          <mat-table #savingsTable [dataSource]="savingsSummaryTableData">
+            <ng-container matColumnDef="savingsType">
+              <mat-header-cell *matHeaderCellDef>Type</mat-header-cell>
+              <mat-cell *matCellDef="let savingsSummaryTable"><a routerLink="{{savingsSummaryTable.savingsTypeRouterLink}}">{{savingsSummaryTable.savingsType}}</a> </mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="principalAmount">
+              <mat-header-cell *matHeaderCellDef>Principal Amount</mat-header-cell>
+              <mat-cell *matCellDef="let savingsSummaryTable"> {{savingsSummaryTable.principalAmount}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="currentValue">
+              <mat-header-cell *matHeaderCellDef>Current Value</mat-header-cell>
+              <mat-cell *matCellDef="let savingsSummaryTable"> {{savingsSummaryTable.currentValue}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="interestAccrued">
+              <mat-header-cell *matHeaderCellDef>Interest Accrued</mat-header-cell>
+              <mat-cell *matCellDef="let savingsSummaryTable"> {{savingsSummaryTable.interestAccrued}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="interestEarned">
+              <mat-header-cell *matHeaderCellDef>Interest Earned</mat-header-cell>
+              <mat-cell *matCellDef="let savingsSummaryTable"> {{savingsSummaryTable.interestEarned}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="interestReceived">
+              <mat-header-cell *matHeaderCellDef>Interest Received</mat-header-cell>
+              <mat-cell *matCellDef="let savingsSummaryTable"> {{savingsSummaryTable.interestReceived}}</mat-cell>
+            </ng-container>
+            <mat-header-row *matHeaderRowDef="savingsSummaryTableDisplayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: savingsSummaryTableDisplayedColumns;"></mat-row>
+          </mat-table>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

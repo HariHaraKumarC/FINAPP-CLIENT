@@ -1,4 +1,7 @@
 .finapp-header .mat-toolbar{
   height:50px;
   background: white;
+  top:0;
+  left:0;
+  right:0;
 }

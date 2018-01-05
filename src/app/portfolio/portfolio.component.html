@@ -1,1 +1,98 @@
-
+<div id="finapp-portfolio">
+  <div id="finapp-portfolio-primary-card" class="finapp-body-sidenav-content-primary-card">
+    <mat-card class="mat-elevation-z6">
+      <mat-card-header>
+        <mat-card-title>Portfolio Summary</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <div id="finapp-portfolio-savings" class="finapp-body-sidenav-content-primary-card-content">
+          <mat-toolbar>
+            <a routerLink="/portfolio/savings">Savings</a>
+          </mat-toolbar>
+          <mat-table #savingsTable [dataSource]="savingsData">
+            <ng-container matColumnDef="principalAmount">
+              <mat-header-cell *matHeaderCellDef>Principal Amount</mat-header-cell>
+              <mat-cell *matCellDef="let savings"> {{savings.principalAmount}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="currentValue">
+              <mat-header-cell *matHeaderCellDef>Current Value</mat-header-cell>
+              <mat-cell *matCellDef="let savings"> {{savings.currentValue}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="interestAccrued">
+              <mat-header-cell *matHeaderCellDef>Interest Accrued</mat-header-cell>
+              <mat-cell *matCellDef="let savings"> {{savings.interestAccrued}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="interestEarned">
+              <mat-header-cell *matHeaderCellDef>Interest Earned</mat-header-cell>
+              <mat-cell *matCellDef="let savings"> {{savings.interestEarned}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="interestReceived">
+              <mat-header-cell *matHeaderCellDef>Interest Received</mat-header-cell>
+              <mat-cell *matCellDef="let savings"> {{savings.interestReceived}}</mat-cell>
+            </ng-container>
+            <mat-header-row *matHeaderRowDef="savingsDisplayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: savingsDisplayedColumns;"></mat-row>
+          </mat-table>
+        </div>
+        <div id="finapp-portfolio-investments" class="finapp-body-sidenav-content-primary-card-content">
+          <mat-toolbar>
+            <a routerLink="/portfolio/savings">Investments</a>
+          </mat-toolbar>
+          <mat-table #savingsTable [dataSource]="savingsData">
+            <ng-container matColumnDef="principalAmount">
+              <mat-header-cell *matHeaderCellDef>Investment Amount</mat-header-cell>
+              <mat-cell *matCellDef="let savings"> {{savings.principalAmount}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="currentValue">
+              <mat-header-cell *matHeaderCellDef>Current Value</mat-header-cell>
+              <mat-cell *matCellDef="let savings"> {{savings.currentValue}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="interestAccrued">
+              <mat-header-cell *matHeaderCellDef>Today Gain/Loss</mat-header-cell>
+              <mat-cell *matCellDef="let savings"> {{savings.interestAccrued}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="interestEarned">
+              <mat-header-cell *matHeaderCellDef>Notional Gain/Loss</mat-header-cell>
+              <mat-cell *matCellDef="let savings"> {{savings.interestEarned}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="interestReceived">
+              <mat-header-cell *matHeaderCellDef>Total Realized Gain/Loss</mat-header-cell>
+              <mat-cell *matCellDef="let savings"> {{savings.interestReceived}}</mat-cell>
+            </ng-container>
+            <mat-header-row *matHeaderRowDef="savingsDisplayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: savingsDisplayedColumns;"></mat-row>
+          </mat-table>
+        </div>
+        <div id="finapp-portfolio-insurance" class="finapp-body-sidenav-content-primary-card-content">
+          <mat-toolbar>
+            <a routerLink="/portfolio/savings">Insurances</a>
+          </mat-toolbar>
+          <mat-table #savingsTable [dataSource]="savingsData">
+            <ng-container matColumnDef="principalAmount">
+              <mat-header-cell *matHeaderCellDef>Total Sum Assured</mat-header-cell>
+              <mat-cell *matCellDef="let savings"> {{savings.principalAmount}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="currentValue">
+              <mat-header-cell *matHeaderCellDef>Cover Start Date</mat-header-cell>
+              <mat-cell *matCellDef="let savings"> {{savings.currentValue}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="interestAccrued">
+              <mat-header-cell *matHeaderCellDef>Cover End Date</mat-header-cell>
+              <mat-cell *matCellDef="let savings"> {{savings.interestAccrued}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="interestEarned">
+              <mat-header-cell *matHeaderCellDef>Term</mat-header-cell>
+              <mat-cell *matCellDef="let savings"> {{savings.interestEarned}}</mat-cell>
+            </ng-container>
+            <ng-container matColumnDef="interestReceived">
+              <mat-header-cell *matHeaderCellDef>XXX</mat-header-cell>
+              <mat-cell *matCellDef="let savings"> {{savings.interestReceived}}</mat-cell>
+            </ng-container>
+            <mat-header-row *matHeaderRowDef="savingsDisplayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: savingsDisplayedColumns;"></mat-row>
+          </mat-table>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</div>

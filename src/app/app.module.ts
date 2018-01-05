@@ -8,6 +8,9 @@ import {
   MatSidenavModule,
   MatMenuModule,
   MatListModule,
+  MatCardModule,
+  MatTableModule,
+  MatGridListModule
 } from '@angular/material';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -16,6 +19,7 @@ import { SideNavComponent } from './side-nav/side-nav.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
+import { SavingsComponent } from './savings/savings.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,8 @@ import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
     FooterComponent,
     SideNavComponent,
     PortfolioComponent,
-    BreadcrumbComponent
+    BreadcrumbComponent,
+    SavingsComponent
   ],
   imports: [
     BrowserModule,
@@ -35,6 +40,9 @@ import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
     MatSidenavModule,
     MatMenuModule,
     MatListModule,
+    MatCardModule,
+    MatTableModule,
+    MatGridListModule,
     AppRoutingModule
   ],
   providers: [],

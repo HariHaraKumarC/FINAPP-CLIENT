@@ -1,8 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { SavingsComponent } from "./savings/savings.component";
 
 const appRoutes: Routes = [
+  {
+    path: 'portfolio/savings',
+    component: SavingsComponent
+  },
   {
     path: 'portfolio/summary',
     component: PortfolioComponent

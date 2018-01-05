@@ -1,4 +1,13 @@
 .finapp-body .mat-sidenav-container{
-  height:500px;
+  position: absolute;
+  top:98px;
+  bottom:30px;
+  left: 0;
+  right: 0;
 }
+.finapp-side-nav-content{
+  padding: 2%;
+  min-width: 1000px;
+}
+
 
