@@ -10,7 +10,8 @@ import {
   MatListModule,
   MatCardModule,
   MatTableModule,
-  MatGridListModule
+  MatGridListModule,
+  MatTooltipModule
 } from '@angular/material';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
@@ -20,6 +21,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BreadcrumbComponent } from './breadcrumb/breadcrumb.component';
 import { SavingsComponent } from './savings/savings.component';
+import { FixedDepositsComponent } from './fixed-deposits/fixed-deposits.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +31,8 @@ import { SavingsComponent } from './savings/savings.component';
     SideNavComponent,
     PortfolioComponent,
     BreadcrumbComponent,
-    SavingsComponent
+    SavingsComponent,
+    FixedDepositsComponent
   ],
   imports: [
     BrowserModule,
@@ -43,6 +46,7 @@ import { SavingsComponent } from './savings/savings.component';
     MatCardModule,
     MatTableModule,
     MatGridListModule,
+    MatTooltipModule,
     AppRoutingModule
   ],
   providers: [],

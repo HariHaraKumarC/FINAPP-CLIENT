@@ -9,10 +9,10 @@
           <mat-grid-list cols="3" rowHeight="40px">
             <mat-grid-tile><span class="grid-list-label">Deposited Amount: <span class="grid-list-value">15000.00</span></span></mat-grid-tile>
             <mat-grid-tile><span class="grid-list-label">Current value: <span class="grid-list-value">15500.00</span></span></mat-grid-tile>
-            <mat-grid-tile><span class="grid-list-label">Deposited Amount: <span class="grid-list-value">500.00</span></span></mat-grid-tile>
+            <mat-grid-tile><span class="grid-list-label">Interest Earned: <span class="grid-list-value">500.00</span></span></mat-grid-tile>
           </mat-grid-list>
           <mat-divider></mat-divider>
-          <mat-table #savingsTable [dataSource]="savingsSummaryTableData">
+          <mat-table #savingsSummaryTable [dataSource]="savingsSummaryTableData">
             <ng-container matColumnDef="savingsType">
               <mat-header-cell *matHeaderCellDef>Type</mat-header-cell>
               <mat-cell *matCellDef="let savingsSummaryTable"><a routerLink="{{savingsSummaryTable.savingsTypeRouterLink}}">{{savingsSummaryTable.savingsType}}</a> </mat-cell>

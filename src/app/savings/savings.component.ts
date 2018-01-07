@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, OnInit} from '@angular/core';
 import { MatTableDataSource } from '@angular/material';
 import { SavingsSummaryTable } from "../savings/savings";
 

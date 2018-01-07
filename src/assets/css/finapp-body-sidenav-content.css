@@ -6,6 +6,15 @@
   font-weight: normal;
 }
 
+.finapp-body-sidenav-content-primary-card-action-buttons .mat-icon-button .action-button-wrapper {
+  color: #0000cc;
+  vertical-align: top;
+}
+
+.finapp-body-sidenav-content-primary-card-spacer {
+  flex: 1 1 auto;
+}
+
 /*Primary card content toolbar*/
 .finapp-body-sidenav-content-primary-card-content .mat-toolbar {
   font-weight: bold;
@@ -30,7 +39,7 @@
 }
 
 .finapp-body-sidenav-content-primary-card-content .mat-cell a {
-  color: #0000cc;
+  color: #73739e;
 }
 
 .finapp-body-sidenav-content-primary-card-content .mat-cell a:hover {
@@ -40,6 +49,7 @@
 
 .finapp-body-sidenav-content-primary-card-content .mat-header-cell {
   font-weight: bold;
+  font-size: 13px;
 }
 
 /*Primary card content mat grid list*/
