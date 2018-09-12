@@ -1,6 +1,6 @@
 import { Component, OnInit} from '@angular/core';
 import { MatTableDataSource } from '@angular/material';
-import { SavingsSummaryTable } from "../savings/savings";
+import { SavingsSummaryTable } from "../shared/models/savings";
 
 @Component({
   selector: 'app-savings',

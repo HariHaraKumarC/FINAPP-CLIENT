@@ -1,4 +1,5 @@
-import {Portfolio} from "../portfolio/portfolio";
+import {Portfolio} from "./portfolio";
+import {FixedDeposits} from "./fixed-deposits";
 
 export class Savings {
   savingsId:number;
@@ -7,7 +8,7 @@ export class Savings {
   interestAccrued:number;
   interestEarned:number;
   interestReceived:number;
-  portfolio:Portfolio;
+  fixedDeposits:FixedDeposits;
 }
 
 export class SavingsSummaryTable {

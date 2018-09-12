@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { MatTableDataSource } from '@angular/material';
-import {FDTransactions} from "./fixed-deposits-transactions";
+import { MatTableDataSource,MatDialog,MatDialogRef } from '@angular/material';
+import { FDTransactions } from "../shared/models/fd-transactions";
+import { CreateFdtransactionComponent } from "./create-fdtransaction/create-fdtransaction.component";
 
 @Component({
   selector: 'app-fixed-deposits',
@@ -10,12 +11,18 @@ import {FDTransactions} from "./fixed-deposits-transactions";
 export class FixedDepositsComponent implements OnInit {
   fdTransactionsData = new MatTableDataSource<FDTransactions>(FD_TRANSACTIONS_DATA);
   fdTransactionsDisplayedColumns = ['accountNumber', 'principalAmount', 'currentValue', 'interestEarned', 'maturityDate', 'maturityAmount', 'actions'];
-
-  constructor() { }
+  createFDTransactionDialogRef: MatDialogRef <CreateFdtransactionComponent>;
+  constructor(public dialog:MatDialog) { }
 
   ngOnInit() {
   }
 
+  openCreateFDTransactionDialog(): void {
+    this.createFDTransactionDialogRef=this.dialog.open(CreateFdtransactionComponent,
+      {
+        width: '50%'
+      });
+  }
 }
 
 const FD_TRANSACTIONS_DATA:FDTransactions[] = [

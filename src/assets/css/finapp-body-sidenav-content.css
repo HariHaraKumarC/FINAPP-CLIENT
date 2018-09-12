@@ -57,14 +57,59 @@
   background: #f5f5f5;
 }
 
-.finapp-body-sidenav-content-primary-card .mat-grid-tile .grid-list-label{
+.finapp-body-sidenav-content-primary-card .mat-grid-tile .grid-list-label {
   color: #0000cc;
   font-weight: bold;
   left: 20px;
   position: absolute;
 }
 
-.finapp-body-sidenav-content-primary-card .mat-grid-tile .grid-list-value{
+.finapp-body-sidenav-content-primary-card .mat-grid-tile .grid-list-value {
   color: #bb14cc;
   font-weight: bold;
+}
+
+.finapp-crud-dialog .mat-dialog-title {
+  font-size: 20px;
+  font-family: 'Tahoma';
+  color: #0000cc;
+  font-weight: normal;
+}
+
+.finapp-crud-dialog-content-table {
+  width:100%;
+  border-collapse: collapse;
+}
+
+.finapp-crud-dialog-content-table td {
+  padding-top: 1.5%;
+  padding-bottom: 1.5%;
+}
+
+.finapp-crud-dialog-content-table .mat-form-field {
+  width:100%;
+  font-size:16px;
+}
+
+.finapp-crud-dialog-content-table .mat-error {
+  color: #842210;
+  font-size: 9px;
+}
+
+.finapp-crud-dialog-content-table .mat-form-field-invalid .mat-form-field-label {
+  color: #842210;
+}
+
+.finapp-crud-dialog-actions .mat-icon {
+  height: 35px;
+  width: 35px;
+  font-size: 35px;
+}
+
+.finapp-crud-dialog-actions #ok{
+  color: #0000cc;
+}
+
+.finapp-crud-dialog-actions #nok{
+  color: #842210;
 }

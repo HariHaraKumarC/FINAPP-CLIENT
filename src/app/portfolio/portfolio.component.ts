@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {MatTableDataSource} from '@angular/material';
-import {Savings} from "../savings/savings";
+import {Savings} from "../shared/models/savings";
+import {Portfolio} from "../shared/models/portfolio";
+import {PortfolioService} from "../shared/services/portfolio/portfolio.service";
 
 @Component({
   selector: 'app-portfolio',
@@ -8,16 +10,47 @@ import {Savings} from "../savings/savings";
   styleUrls: ['./portfolio.component.css']
 })
 export class PortfolioComponent implements OnInit {
-  savingsData = new MatTableDataSource<Savings>(SAVINGS_DATA);
+
+  portfolio:Portfolio;
+  savingsData:MatTableDataSource<Savings>;
   savingsDisplayedColumns = ['principalAmount', 'currentValue', 'interestAccrued', 'interestEarned', 'interestReceived'];
 
-  constructor() {
+  constructor(private portfolioService:PortfolioService) {
   }
 
   ngOnInit() {
+    this.getUserPortfolio();
+    /*this.getMockedUserPortfolio*/ // Enable if mock details to be fetched
+  }
+
+  /**
+   * Get User Portfolio details from the Server
+   */
+  getUserPortfolio():void {
+    this.portfolioService.getUserPortfolioDetails(1).subscribe(
+      portfolio => {
+        this.portfolio = portfolio;
+        this.getPortfolioSavingsData(this.portfolio);
+      },
+      error => console.log(error)
+    );
+  }
+
+  /**
+   * Get User Portfolio details from the Mock
+   */
+  getMockedUserPortfolio():void {
+    this.portfolio = this.portfolioService.getMockUserPortfolioDetails();
+  }
+
+  /**
+   * Fetches the Saving Summary Data from the Portfolio Details
+   */
+  getPortfolioSavingsData(portfolio:Portfolio):void {
+    var portfolioSavingsSummaryData:Savings;
+    portfolioSavingsSummaryData = portfolio.savings;
+    console.log(portfolioSavingsSummaryData);
+    var savingsDataTableInputArray:Savings[] = [portfolioSavingsSummaryData];
+    this.savingsData = new MatTableDataSource<Savings>(savingsDataTableInputArray);
   }
 }
-
-const SAVINGS_DATA:Savings[] = [
-  {savingsId: 1, principalAmount: 15000.00, currentValue: 15500.52, interestAccrued: 500.52, interestEarned: 500.52, interestReceived: 0.00, portfolio:null},
-];

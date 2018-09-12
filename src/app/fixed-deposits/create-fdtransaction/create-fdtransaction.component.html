@@ -1,0 +1,73 @@
+<div id="finapp-create-fixed-deposits-transaction-dialog" class="finapp-crud-dialog">
+  <form>
+    <h2 mat-dialog-title>Create FD Transaction</h2>
+    <mat-dialog-content>
+      <table class="finapp-crud-dialog-content-table">
+        <tr>
+          <td>
+            <mat-form-field class="mat-block">
+              <input matInput placeholder="Account Number" [formControl]="accountNumber" required>
+              <mat-error *ngIf="accountNumber.invalid">{{getAccountNumberErrorMessages()}}</mat-error>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field>
+              <input matInput placeholder="Financial Institution Name">
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field>
+              <input matInput placeholder="Principal Amount" required>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field class="mat-block">
+              <input matInput placeholder="Interest Rate" required>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field class="mat-block">
+              <mat-select placeholder="Frequency" required>
+                <mat-option value="0">Simple Interest</mat-option>
+                <mat-option value="1">Monthly</mat-option>
+                <mat-option value="2">Quarterly</mat-option>
+                <mat-option value="3">Half Yearly</mat-option>
+                <mat-option value="4">Yearly</mat-option>
+              </mat-select>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field>
+              <input matInput [matDatepicker]="startDatePicker" placeholder="Start Date" required>
+              <mat-datepicker-toggle matSuffix [for]="startDatePicker"></mat-datepicker-toggle>
+              <mat-datepicker #startDatePicker></mat-datepicker>
+            </mat-form-field>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <mat-form-field>
+              <input matInput [matDatepicker]="maturityDatePicker" placeholder="Maturity Date" required>
+              <mat-datepicker-toggle matSuffix [for]="maturityDatePicker"></mat-datepicker-toggle>
+              <mat-datepicker #maturityDatePicker></mat-datepicker>
+            </mat-form-field>
+          </td>
+        </tr>
+      </table>
+    </mat-dialog-content>
+    <mat-dialog-actions align="end" class="finapp-crud-dialog-actions">
+      <button mat-icon-button><span id="ok"><mat-icon>check_circle</mat-icon></span></button>
+      <button mat-icon-button><span id="nok"><mat-icon>cancel</mat-icon></span></button>
+    </mat-dialog-actions>
+  </form>
+</div>
